@@ -1,0 +1,10 @@
+<ul>
+    @for (item of users; track $index) {
+    <li>
+        <p>Id: {{ item.id}}</p>
+        <a [routerLink]="['/home/users/', item.id ]" >Nome: {{ item.name }}</a>
+        <!-- <a [routerLink]="['/home/users/' + item.id, item.name]" >Nome: {{ item.name }}</a> -->
+        <!-- <a routerLink="{{item.id}}" >Nome: {{ item.name }} </a> -->
+    </li>
+    }
+</ul>
